@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  height: 100vh;
+  background-image: linear-gradient(90deg, #BA55D3,#9932CC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.calculator {
+    box-shadow: 0 0 25px 0 rgb(0 0 0 / 30%);
+    border-radius: 0.5em;
+    overflow: hidden;
+    font-size: 1.5rem;
+
+}
+button{
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
+  border: 0;
+  overflow: visible;
+  font-family: 'Roboto', sans-serif;
+}
+.calculator-display{
+  width: 100%;
+  text-align: right;
+  color: white;
+  background-color: black;
+  padding:1.2rem 1.5rem;
+  font-size:2.2rem;
+  font-family: 'Roboto', sans-serif;
+ 
+}
+.calculator-keys{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  background-color: #cbd2d9;
+  gap: 0.25rem;
+}
+[data-type="equal"]{
+  grid-column: 4/span 1;
+  grid-row: 2/span 4;
+  background-color: #f9703e;;;
+}
+[data-type="equal"]:active{
+  background-color:#f35627; ;
+}
+[data-type="number"]{
+  background-color:#f5f7fa ;
+}
+[data-type="operator"]{
+  background-color:#e4e7eb ;
+}
+[data-type="number"]:active{
+ background-color: #cbd2d9;
+}
+
+[data-type="operator"]:active{
+  background-color: #cbd2d9;
+}
+[data-type="clear"]:active{
+  background-color: #cbd2d9;
+}
+@media (max-width:480px) {
+  .calculator {
+width: 80vw;
+}
+
+button{
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 0;
+  overflow: visible;
+ 
+}
+
+}
